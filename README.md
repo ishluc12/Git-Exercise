@@ -108,3 +108,4 @@ Changes to be committed:
         new file:   team.html
 PS D:\old\The Gym\git-exercises> Remove-Item team.html
 ```
+# Git Exercises
