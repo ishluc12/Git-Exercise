@@ -108,4 +108,53 @@ Changes to be committed:
         new file:   team.html
 PS D:\old\The Gym\git-exercises> Remove-Item team.html
 ```
-# Git Exercises
+
+## Bundle 2
+## Exercise 1
+
+
+```bash
+
+PS D:\old\The Gym\git-exercises> git branch
+* dev
+  main
+PS D:\old\The Gym\git-exercises> git branch ft/bundle-2
+PS D:\old\The Gym\git-exercises> git checkout ft/bundle-2
+M       README.md
+Switched to branch 'ft/bundle-2'
+PS D:\old\The Gym\git-exercises> echo "<h1>service page</h1>" >> services.html
+PS D:\old\The Gym\git-exercises> git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\old\The Gym\git-exercises> git add services.html
+PS D:\old\The Gym\git-exercises> git commit -m "adding service page"     
+[ft/bundle-2 0af6234] adding service page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 services.html
+ 
+PS D:\old\The Gym\git-exercises> git push --set-upstream origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 101.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/bundle-2
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+PS D:\old\The Gym\git-exercises> 
+```
