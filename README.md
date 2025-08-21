@@ -322,3 +322,140 @@ To https://github.com/ishluc12/Git-Exercise.git
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 PS D:\old\The Gym\git-exercises>
 ```
+
+## Bundle 2
+## Exercise 2
+
+```bash
+PS D:\old\The Gym\git-exercises> git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+PS D:\old\The Gym\git-exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\old\The Gym\git-exercises> git add home.html  
+PS D:\old\The Gym\git-exercises> git commit -m "added full content of home page"
+[main d24a0c6] added full content of home page
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+PS D:\old\The Gym\git-exercises> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 430 bytes | 215.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ishluc12/Git-Exercise.git
+   f67efdb..d24a0c6  main -> main
+PS D:\old\The Gym\git-exercises> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS D:\old\The Gym\git-exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\old\The Gym\git-exercises> git log --oneline
+d24a0c6 (HEAD -> main, origin/main, origin/HEAD) added full content of home page
+f67efdb Merge pull request #4 from ishluc12/ft/service-redesign
+19b2de8 (origin/ft/service-redesign, ft/service-redesign) summary of commands i used on bundle 2 exercise 2
+c36e537 Merge remote-tracking branch 'origin/ft/service-redesign' into ft/service-redesign
+9fe58ee I resolved the conflicts in the branch
+4b144e9 Merge branch 'main' into ft/service-redesign
+6c25d62 I added changes to the service page
+b37e8ce new changes to service name
+392b0c2  I created service page
+d19cb76 Merge pull request #3 from ishluc12/ft/bundle-2
+a01d493 (origin/ft/bundle-2, ft/bundle-2) adding codes of creation of service page
+2c3c310 Merge pull request #2 from ishluc12/ft/bundle-2
+0af6234 adding service page
+4c4c248 (origin/dev, dev) Resolve merge conflict in README.md
+c5fe3ac adding exercise 2 commands
+ad7d1f8 add about and home page from stash
+a1ef233 Remove HTML files added by stash
+1d0b3d1 Resolved merge conflict in README.md after stash pop
+b3139bd Save current changes before applying stash
+b5cfaff additional commands i have used
+5567e6c modified some changes which was commited mistekenly
+88a9663 adding readme file
+7e54afc my first commit
+PS D:\old\The Gym\git-exercises>  git rebase main
+Current branch main is up to date.
+PS D:\old\The Gym\git-exercises> git log
+commit d24a0c65555d9c8e992986437538d88997056502 (HEAD -> main, origin/main, origin/HEAD)
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 18:22:15 2025 +0200
+
+    added full content of home page
+
+commit f67efdbb4dc7193943714de83d2ee387d8948dff
+Merge: 6c25d62 19b2de8
+Author: ishluc12 <146773281+ishluc12@users.noreply.github.com>
+Date:   Thu Aug 21 13:40:49 2025 +0200
+
+    Merge pull request #4 from ishluc12/ft/service-redesign
+
+     I created service page
+
+commit 19b2de85eac36f741070eae3281c74e02d4a7be7 (origin/ft/service-redesign, ft/service-redesign)
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 12:04:17 2025 +0200
+
+    summary of commands i used on bundle 2 exercise 2
+
+commit c36e5378216e92a10c47f89d32968246fbdf1041
+Merge: 9fe58ee 4b144e9
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 11:41:09 2025 +0200
+
+    Merge remote-tracking branch 'origin/ft/service-redesign' into ft/service-redesign
+
+commit 9fe58eeee49616c406713c8d8971435b98261790
+Merge: 392b0c2 6c25d62
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 11:37:37 2025 +0200
+
+    I resolved the conflicts in the branch
+
+commit 4b144e9bc0fa03000a84432ffee04afe048590a9
+Merge: 392b0c2 6c25d62
+Author: ishluc12 <146773281+ishluc12@users.noreply.github.com>
+Date:   Thu Aug 21 11:34:33 2025 +0200
+
+    Merge branch 'main' into ft/service-redesign
+
+commit 6c25d62db8c147b026ce0229333e6b69827f218f
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 11:21:31 2025 +0200
+
+    I added changes to the service page
+
+commit b37e8ce6061916d612c8c54b8a62c2f06540dac2
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 11:19:53 2025 +0200
+
+    new changes to service name
+
+commit 392b0c221ffd3b59834b1193e3529455ba1b9e86
+Author: ish-luc <jlucishimwe2003@gmail.com>
+Date:   Thu Aug 21 10:58:19 2025 +0200
+
+     I created service page
+
+commit d19cb762a865b53f65216d291e5e40ff1c0643df
+Merge: 2c3c310 a01d493
+Author: ishluc12 <146773281+ishluc12@users.noreply.github.com>
+Date:   Wed Aug 20 17:02:51 2025 +0200
+
+    Merge pull request #3 from ishluc12/ft/bundle-2
+PS D:\old\The Gym\git-exercises> git add --all    
+PS D:\old\The Gym\git-exercises> git commit -m "added li and use rebase to get changes from main"
+[main 7a7f790] added li and use rebase to get changes from main
+ 1 file changed, 3 insertions(+)
+PS D:\old\The Gym\git-exercises> git push --set-upstream origin ft/home-page-redesign
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+PS D:\old\The Gym\git-exercises> 
+```
