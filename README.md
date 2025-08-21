@@ -322,3 +322,175 @@ To https://github.com/ishluc12/Git-Exercise.git
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 PS D:\old\The Gym\git-exercises>
 ```
+
+
+
+## Bundle 3
+## Exercise 1
+
+```bash
+PS D:\old\The Gym\git-exercises> git pull
+Already up to date.
+PS D:\old\The Gym\git-exercises> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS D:\old\The Gym\git-exercises> git add team.html  
+PS D:\old\The Gym\git-exercises> git commit -m "feat: team page"   
+[ft/team-page f29ad73] feat: team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+PS D:\old\The Gym\git-exercises> git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 432 bytes | 216.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/team-page
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS D:\old\The Gym\git-exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\old\The Gym\git-exercises> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS D:\old\The Gym\git-exercises> git checkout  ft/team-page  
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS D:\old\The Gym\git-exercises> git log --oneline
+f29ad73 (HEAD -> ft/team-page, origin/ft/team-page) feat: team page
+f67efdb (origin/main, origin/HEAD, main, ft/contact-page) Merge pull request #4 from ishluc12/ft/service-redesign
+19b2de8 (origin/ft/service-redesign, ft/service-redesign) summary of commands i used on bundle 2 exercise 2
+c36e537 Merge remote-tracking branch 'origin/ft/service-redesign' into ft/service-redesign
+9fe58ee I resolved the conflicts in the branch
+4b144e9 Merge branch 'main' into ft/service-redesign
+6c25d62 I added changes to the service page
+b37e8ce new changes to service name
+392b0c2  I created service page
+d19cb76 Merge pull request #3 from ishluc12/ft/bundle-2
+a01d493 (origin/ft/bundle-2, ft/bundle-2) adding codes of creation of service page
+2c3c310 Merge pull request #2 from ishluc12/ft/bundle-2
+0af6234 adding service page
+4c4c248 (origin/dev, dev) Resolve merge conflict in README.md
+c5fe3ac adding exercise 2 commands
+ad7d1f8 add about and home page from stash
+a1ef233 Remove HTML files added by stash
+1d0b3d1 Resolved merge conflict in README.md after stash pop
+b3139bd Save current changes before applying stash
+b5cfaff additional commands i have used
+5567e6c modified some changes which was commited mistekenly
+88a9663 adding readme file
+7e54afc my first commit
+PS D:\old\The Gym\git-exercises> git checkout -b ft/contact-page
+fatal: a branch named 'ft/contact-page' already exists
+PS D:\old\The Gym\git-exercises> git checkout  ft/contact-page  
+Switched to branch 'ft/contact-page'
+PS D:\old\The Gym\git-exercises> git cherry-pick f29ad73   
+[ft/contact-page 36ba599] feat: team page
+ Date: Thu Aug 21 17:44:29 2025 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+PS D:\old\The Gym\git-exercises> git add contact.html   
+PS D:\old\The Gym\git-exercises> git commit -m "feat: contact page"
+[ft/contact-page 8b01bf1] feat: contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+PS D:\old\The Gym\git-exercises> git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 684 bytes | 684.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/contact-page
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS D:\old\The Gym\git-exercises> git checkout -b ft/faq-page    
+Switched to a new branch 'ft/faq-page'
+PS D:\old\The Gym\git-exercises> git add faq.html           
+PS D:\old\The Gym\git-exercises> git commit -m "feat: faq page"    
+[ft/faq-page 8aed1ac] feat: faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+PS D:\old\The Gym\git-exercises> git push --set-upstream origin ft/faq-page    
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 422 bytes | 422.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/faq-page
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS D:\old\The Gym\git-exercises> git log --online
+fatal: unrecognized argument: --online
+PS D:\old\The Gym\git-exercises> git log --oneline
+8aed1ac (HEAD -> ft/faq-page, origin/ft/faq-page) feat: faq page
+8b01bf1 (origin/ft/contact-page, ft/contact-page) feat: contact page
+36ba599 feat: team page
+f67efdb (origin/main, origin/HEAD, main) Merge pull request #4 from ishluc12/ft/service-redesign
+19b2de8 (origin/ft/service-redesign, ft/service-redesign) summary of commands i used on bundle 2 exercise 2
+c36e537 Merge remote-tracking branch 'origin/ft/service-redesign' into ft/service-redesign
+9fe58ee I resolved the conflicts in the branch
+4b144e9 Merge branch 'main' into ft/service-redesign
+6c25d62 I added changes to the service page
+b37e8ce new changes to service name
+392b0c2  I created service page
+d19cb76 Merge pull request #3 from ishluc12/ft/bundle-2
+a01d493 (origin/ft/bundle-2, ft/bundle-2) adding codes of creation of service page
+2c3c310 Merge pull request #2 from ishluc12/ft/bundle-2
+0af6234 adding service page
+4c4c248 (origin/dev, dev) Resolve merge conflict in README.md
+c5fe3ac adding exercise 2 commands
+ad7d1f8 add about and home page from stash
+a1ef233 Remove HTML files added by stash
+1d0b3d1 Resolved merge conflict in README.md after stash pop
+b3139bd Save current changes before applying stash
+b5cfaff additional commands i have used
+5567e6c modified some changes which was commited mistekenly
+88a9663 adding readme file
+7e54afc my first commit
+PS D:\old\The Gym\git-exercises> git revert 36ba599
+[ft/faq-page 8145753] Revert "feat: team pagec addedi"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+PS D:\old\The Gym\git-exercises> git status        
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\old\The Gym\git-exercises> git checkout ft/team-page    
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS D:\old\The Gym\git-exercises> git add team.html
+PS D:\old\The Gym\git-exercises> git checkout ft/faq-page                  
+Switched to branch 'ft/faq-page'
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+PS D:\old\The Gym\git-exercises> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 278 bytes | 278.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ishluc12/Git-Exercise.git
+   8aed1ac..8145753  ft/faq-page -> ft/faq-page
+PS D:\old\The Gym\git-exercises> 
+```
