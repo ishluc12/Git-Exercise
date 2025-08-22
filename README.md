@@ -459,3 +459,104 @@ To https://github.com/ishluc12/Git-Exercise.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 PS D:\old\The Gym\git-exercises> 
 ```
+
+
+# Bundle 4
+# Exercise 2
+```bash
+PS D:\old\The Gym\git-exercises> git checkout -b ft/footer  
+Switched to a new branch 'ft/footer'
+PS D:\old\The Gym\git-exercises> git add footer.html
+PS D:\old\The Gym\git-exercises> git commit -m "feat: footer page"
+[ft/footer fef13d4] feat: footer page
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 footer.html
+PS D:\old\The Gym\git-exercises> git add footer.html
+PS D:\old\The Gym\git-exercises> git commit -m "adding content to the footer page"
+[ft/footer 797ec67] adding content to the footer page
+ 1 file changed, 4 insertions(+)
+PS D:\old\The Gym\git-exercises> git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS D:\old\The Gym\git-exercises>   git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 580 bytes | 193.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/footer
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS D:\old\The Gym\git-exercises> git checkout main        
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS D:\old\The Gym\git-exercises> git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+PS D:\old\The Gym\git-exercises> git merge --squash ft/footer
+Updating b39ecb0..797ec67
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 footer.html
+PS D:\old\The Gym\git-exercises> git commit -m "footer changes squashing"
+[ft/squashing 130990c] footer changes squashing
+ 1 file changed, 4 insertions(+)
+ create mode 100644 footer.html
+PS D:\old\The Gym\git-exercises>   git push --set-upstream origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 109.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/ishluc12/Git-Exercise/pull/new/ft/squashing
+remote:
+To https://github.com/ishluc12/Git-Exercise.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+PS D:\old\The Gym\git-exercises> git log --oneline
+130990c (HEAD -> ft/squashing, origin/ft/squashing) footer changes squashing
+b39ecb0 (origin/main, origin/HEAD, git-copy/main, main) Added changes to the home page
+2a39c63 codes i used on rebase
+7a7f790 added li and use rebase to get changes from main
+d24a0c6 added full content of home page
+f67efdb Merge pull request #4 from ishluc12/ft/service-redesign
+19b2de8 (origin/ft/service-redesign, ft/service-redesign) summary of commands i used on bundle 2 exercise 2
+c36e537 Merge remote-tracking branch 'origin/ft/service-redesign' into ft/service-redesign
+9fe58ee I resolved the conflicts in the branch
+4b144e9 Merge branch 'main' into ft/service-redesign
+6c25d62 I added changes to the service page
+b37e8ce new changes to service name
+392b0c2  I created service page
+d19cb76 Merge pull request #3 from ishluc12/ft/bundle-2
+a01d493 (origin/ft/bundle-2, ft/bundle-2) adding codes of creation of service page
+2c3c310 Merge pull request #2 from ishluc12/ft/bundle-2
+0af6234 adding service page
+4c4c248 (origin/dev, dev) Resolve merge conflict in README.md
+c5fe3ac adding exercise 2 commands
+ad7d1f8 add about and home page from stash
+a1ef233 Remove HTML files added by stash
+1d0b3d1 Resolved merge conflict in README.md after stash pop
+b3139bd Save current changes before applying stash
+b5cfaff additional commands i have used
+5567e6c modified some changes which was commited mistekenly
+88a9663 adding readme file
+7e54afc my first commit
+PS D:\old\The Gym\git-exercises> 
+```
