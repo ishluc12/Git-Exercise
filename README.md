@@ -35,6 +35,13 @@ PS D:\old\The Gym\git-exercises> git branch
 PS D:\old\The Gym\git-exercises> git branch --show-current
 master
 PS D:\old\The Gym\git-exercises> git branch -m main
+PS D:\old\The Gym\git-exercises> git switch dev 
+A       fork/git-cafe-exercise
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+PS D:\old\The Gym\git-exercises> git branch -d test        
+Deleted branch test (was 4c4c248).
+PS D:\old\The Gym\git-exercises> 
 
 ```
 
